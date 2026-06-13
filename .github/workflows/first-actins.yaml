@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   builds:
-    runs-on: ubantu-latest
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -17,7 +17,7 @@ jobs:
       with:
         python-version: [matrix.python-version]
 
-    -name: install dependencies
+    - name: install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install pytest
